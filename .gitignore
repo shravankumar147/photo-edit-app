@@ -49,4 +49,6 @@ output_*/    # Any generic output folders
 
 # Keep LUT files for contribution/versioning
 !examples/*.cube
-
+!examples/sample.jpg
+!examples/cinematic/
+!examples/cinematic/sample.jpg

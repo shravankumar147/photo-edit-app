@@ -91,6 +91,17 @@ examples/output_folder/cinematic/
 * Force CPU instead of GPU: `--cpu`
 * Disable dithering: `--no-dither`
 
+
+####  Example
+
+**Input → Output (Cinematic LUT)**
+
+<p align="center">
+  <img src="examples/sample.jpg" alt="Input" width="45%">
+  <img src="examples/cinematic/sample.jpg" alt="Cinematic Output" width="45%">
+</p>
+
+
 ---
 
 ### 3️⃣ Supported Image Formats
