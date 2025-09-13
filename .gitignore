@@ -1,0 +1,52 @@
+# Python cache / env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Image outputs (ignore processed outputs)
+examples/*/  # LUT-named output folders
+output_*/    # Any generic output folders
+*.jpg
+*.jpeg
+*.png
+
+# RAW images (ignore large RAW inputs)
+*.nef
+*.cr2
+*.arw
+*.dng
+*.raf
+*.rw2
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Optional: large models / weights
+*.ckpt
+*.pth
+*.onnx
+
+# Keep LUT files for contribution/versioning
+!examples/*.cube
+
