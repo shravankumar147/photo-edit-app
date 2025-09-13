@@ -1,10 +1,26 @@
-# Auto-Cinematic Photo Editor
+# 🎞️ Photo Edit App — Auto-Cinematic Photo Editor
 
 A **free, open-source, automated photo editing app** for RAW and JPEG images that applies **auto exposure + cinematic LUTs**, supporting **GPU acceleration**, **multi-threaded batch processing**, and **dithering**. Think of it as a lightweight, scriptable Lightroom workflow.
 
 ---
 
-## Features
+## Why this project?
+
+As a **photographer**, I love capturing beautiful moments.
+As a **programmer**, I believe repetitive tasks should be automated.
+
+Instead of spending hours in Lightroom manually fixing exposure and applying presets, I wanted a simple open-source tool that:
+
+* 📂 Loads **RAW or JPEG** images
+* 🔆 Auto-corrects **exposure & contrast**
+* 🎨 Applies a **cinematic film LUT (.cube)**
+* 💾 Exports a ready-to-share image
+
+This project is my attempt to combine **artistry** with **automation**, making photo editing accessible, fast, and free.
+
+---
+
+## ✨ Features
 
 * **Auto exposure / contrast stretch**
 * **3D LUT application** (trilinear CPU fallback or GPU-accelerated via PyTorch)
@@ -17,7 +33,7 @@ A **free, open-source, automated photo editing app** for RAW and JPEG images tha
 
 ---
 
-## Repo Layout
+## 📂 Repo Layout
 
 ```
 photo-edit-app/
@@ -26,7 +42,8 @@ photo-edit-app/
 ├── requirements.txt        # Dependencies
 ├── examples/
 │   ├── sample.jpg
-│   └── cinematic.cube
+│   ├── cinematic.cube
+│   └── cinematic/output.jpg
 │
 └── photo_edit/
     ├── __init__.py
@@ -38,7 +55,7 @@ photo-edit-app/
 
 ---
 
-## Requirements
+## ⚙️ Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -58,7 +75,7 @@ torchvision
 
 ---
 
-## Usage
+## 🚀 Usage
 
 ### 1️⃣ Single Image
 
@@ -91,29 +108,29 @@ examples/output_folder/cinematic/
 * Force CPU instead of GPU: `--cpu`
 * Disable dithering: `--no-dither`
 
+---
 
-####  Example
+## 📸 Example
 
 **Input → Output (Cinematic LUT)**
 
 <p align="center">
   <img src="examples/sample.jpg" alt="Input" width="45%">
   <img src="examples/cinematic/sample.jpg" alt="Cinematic Output" width="45%">
-</p>
-
+</p>  
 
 ---
 
-### 3️⃣ Supported Image Formats
+## 📷 Supported Formats
 
 * JPEG / PNG
 * RAW: `.nef`, `.cr2`, `.arw`, `.dng`, `.raf`, `.rw2`
 
 ---
 
-### 4️⃣ Examples
+## 🔧 More Examples
 
-#### Single Image
+### Single Image
 
 ```bash
 python main.py examples/sample.jpg examples/fuji_fp-100c_alt.cube examples
@@ -121,7 +138,7 @@ python main.py examples/sample.jpg examples/fuji_fp-100c_alt.cube examples
 
 * Output: `examples/fuji_fp-100c_alt/sample.jpg`
 
-#### Batch Folder
+### Batch Folder
 
 ```bash
 python main.py examples/input_folder examples/cinematic.cube examples/output_folder --threads 4
@@ -131,7 +148,7 @@ python main.py examples/input_folder examples/cinematic.cube examples/output_fol
 
 ---
 
-### 5️⃣ Notes
+## 📝 Notes
 
 * **GPU acceleration** is automatic if CUDA is available.
 * **Dithering** is optional but recommended to reduce color banding on smooth gradients.
@@ -140,9 +157,8 @@ python main.py examples/input_folder examples/cinematic.cube examples/output_fol
 
 ---
 
-### 6️⃣ License
+## 📜 License
 
 MIT License — free to use, modify, and distribute.
 
 ---
-
